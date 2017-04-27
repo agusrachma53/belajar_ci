@@ -1,0 +1,50 @@
+warning: LF will be replaced by CRLF in application/config/autoload.php.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in application/config/config.php.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in application/config/routes.php.
+The file will have its original line endings in your working directory.
+[1mdiff --git a/application/config/autoload.php b/application/config/autoload.php[m
+[1mindex 7cdc901..47a3ba2 100644[m
+[1m--- a/application/config/autoload.php[m
+[1m+++ b/application/config/autoload.php[m
+[36m@@ -89,7 +89,7 @@[m [m$autoload['drivers'] = array();[m
+ |[m
+ |	$autoload['helper'] = array('url', 'file');[m
+ */[m
+[31m-$autoload['helper'] = array();[m
+[32m+[m[32m$autoload['helper'] = array('url');[m
+ [m
+ /*[m
+ | -------------------------------------------------------------------[m
+[1mdiff --git a/application/config/config.php b/application/config/config.php[m
+[1mindex 1031522..257d39b 100644[m
+[1m--- a/application/config/config.php[m
+[1m+++ b/application/config/config.php[m
+[36m@@ -23,7 +23,13 @@[m [mdefined('BASEPATH') OR exit('No direct script access allowed');[m
+ | a PHP script and you can easily do that on your own.[m
+ |[m
+ */[m
+[31m-$config['base_url'] = '';[m
+[32m+[m
+[32m+[m[32m//mengubah alamat base url menjadi dinamic[m
+[32m+[m
+[32m+[m[32m// $http = 'http' . ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') ? 's' : '') . '://';[m
+[32m+[m[32m// $newurl = str_replace("index.php","", $_SERVER['SCRIPT_NAME']);[m
+[32m+[m[32m// $config['base_url'] = "$http" . $_SERVER['SERVER_NAME'] . "" . $newurl;[m
+[32m+[m[32m$config['base_url'] = "http://localhost/belajar_ci/";[m
+ [m
+ /*[m
+ |--------------------------------------------------------------------------[m
+[1mdiff --git a/application/config/routes.php b/application/config/routes.php[m
+[1mindex 1b45740..e20203b 100644[m
+[1m--- a/application/config/routes.php[m
+[1m+++ b/application/config/routes.php[m
+[36m@@ -49,6 +49,6 @@[m [mdefined('BASEPATH') OR exit('No direct script access allowed');[m
+ | Examples:	my-controller/index	-> my_controller/index[m
+ |		my-controller/my-method	-> my_controller/my_method[m
+ */[m
+[31m-$route['default_controller'] = 'welcome';[m
+[32m+[m[32m$route['default_controller'] = 'Admin';[m
+ $route['404_override'] = '';[m
+ $route['translate_uri_dashes'] = FALSE;[m
