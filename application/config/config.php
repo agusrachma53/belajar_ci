@@ -26,10 +26,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 //mengubah alamat base url menjadi dinamic
 
-// $http = 'http' . ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') ? 's' : '') . '://';
-// $newurl = str_replace("index.php","", $_SERVER['SCRIPT_NAME']);
-// $config['base_url'] = "$http" . $_SERVER['SERVER_NAME'] . "" . $newurl;
-$config['base_url'] = "http://localhost/belajar_ci/";
+$http = 'http' . ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') ? 's' : '') . '://';
+$newurl = str_replace("index.php","", $_SERVER['SCRIPT_NAME']);
+$config['base_url'] = "$http" . $_SERVER['SERVER_NAME'] . "" . $newurl;
+// $config['base_url'] = "http://localhost/belajar_ci/";
 
 /*
 |--------------------------------------------------------------------------
@@ -330,7 +330,7 @@ $config['cache_query_string'] = FALSE;
 | https://codeigniter.com/user_guide/libraries/encryption.html
 |
 */
-$config['encryption_key'] = '';
+$config['encryption_key'] = 'http://localhost/belajar_ci/';
 
 /*
 |--------------------------------------------------------------------------

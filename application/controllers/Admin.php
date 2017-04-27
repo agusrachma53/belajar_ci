@@ -23,13 +23,15 @@ class Admin extends CI_Controller {
 	 */
 	public function index()
 	{
-    $data['tampil'] = "Berhasil";
-		$this->load->view('admin/adm_home',$data);
+    $this->load->view('admin/adm_login');
 	}
 
   public function category_article(){
     $data['tampil'] = "berhasil";
     $this->load->view('admin/adm_category_article',$data);
+  }
+  public function proses_login(){
+    echo "berhasil";
   }
 
 }

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<base href="<?php echo base_url('assets/');?>/">
+<base href="<?php echo base_url('assets/');?>">
 <head>
 <title>Matrix Admin</title>
 <meta charset="UTF-8" />
