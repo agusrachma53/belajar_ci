@@ -31,9 +31,10 @@
   </div>
   <div class="form">
     <h2>Login to your account</h2>
-    <form method="post" action="<?php echo base_url('admin/category_article'); ?>">
-      <input type="text" placeholder="Username"/>
-      <input type="password" placeholder="Password"/>
+    <h3 style="margin-bottom:15px;"> <?php echo $message;  ?></h3>
+    <form method="post" action="<?php echo base_url('admin/aksi_login'); ?>">
+      <input type="text" name="username" placeholder="Username"/>
+      <input type="password" name="password" placeholder="Password"/>
       <button type="submit">Login</button>
     </form>
   </div>
